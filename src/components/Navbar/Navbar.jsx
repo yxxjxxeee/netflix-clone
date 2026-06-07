@@ -7,9 +7,12 @@ import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { auth, logout } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Navbar = () => {
   const navRef = useRef();
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -39,10 +42,11 @@ const Navbar = () => {
         <p>Children</p>
         <img src={bell_icon} alt="" className="icons" />
         <div className="navbar-profile">
+          <p>{user?.displayName}</p>
           <img src={profile_img} alt="" className="profile" />
           <img src={caret_icon} alt="" />
           <div className="dropdown">
-            <p>Sign Out of Netflix</p>
+            <p onClick={() => { logout(); }}>Sign Out of Netflix</p>
           </div>
         </div>
       </div>

@@ -38,7 +38,7 @@ const Player = () => {
       <img
         src={back_arrow_icon}
         onClick={() => {
-          navigate(-1);
+          navigate("/");
         }}
         alt=""
       />
