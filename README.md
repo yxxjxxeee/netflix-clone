@@ -4,8 +4,6 @@
 TMDB API를 활용하여 실시간 영화 데이터를 불러오고, Firebase를 통한 이메일 / 비밀번호 기반 회원가입 및 로그인 기능을 구현했습니다.<br />
 영화 카드를 클릭하면 YouTube 트레일러를 재생할 수 있습니다.
 
-🔗 배포 URL: https://netflix-clone-flax-omega.vercel.app
-
 ## 🛠️ 사용 기술
 
 ![Vite](https://img.shields.io/badge/Vite-9135FF?style=for-the-badge&logo=vite&logoColor=white)
